@@ -1,6 +1,7 @@
 {
     "name": "krishaweb/magento2-feedback",
     "description": "Mangeto 2 Module for Advanced and automated feedback remainder.",
+    "minimum-stability": "dev",
     "require": {
         "php": "~5.5.0|~5.6.0|~7.0.0"
     },

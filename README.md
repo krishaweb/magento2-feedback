@@ -57,7 +57,7 @@ Also admin can fire email anytime with the button in admin.
 Feedback's Magento 2 module is released under the Open Software License 3.0 (OSL-3.0).
 
 ##Support
-If you have concerns or questions, please send an email to support@ometria.com with all relevant details that are needed to investigate or resolve an issue.
+If you have concerns or questions, please send an email to support@krishaweb.com with all relevant details that are needed to investigate or resolve an issue.
 
 
 

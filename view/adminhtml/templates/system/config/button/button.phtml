@@ -1,0 +1,40 @@
+ 
+<script>
+
+    require([
+    'jquery',
+    'prototype',
+    'mage/backend/validation',
+    'jquery/validate'
+    ], function(jQuery){
+
+      jQuery('#send_feedbackmail_now').click(function () {
+        
+        var params = {};
+        new Ajax.Request('<?= /* @escapeNotVerified */ $block->getUrl('feedback/system_config_system_feedback/send') ?>', {
+            parameters:     params,
+            loaderArea:     true,
+            asynchronous:   true,
+            onSuccess: function(transport) {
+                var response = transport.responseText.evalJSON();
+                if(response.status == 'success'){
+                    alert('Mail has been successfully sent.');
+                }
+            }
+        });
+
+        return false;
+            
+      });
+
+    });
+
+
+
+</script>
+
+<div class="pp-buttons-container">
+    <button id="<?php echo $block->getId() ?>">
+        <span><span><span><?php echo $block->escapeHtml($block->getButtonLabel()); ?></span></span></span>
+    </button>
+</div>

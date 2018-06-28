@@ -1,0 +1,58 @@
+.feedback-form{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+.feedback-form .feedback-wrapper{
+	padding: 10px;
+	margin: 0 0 15px;
+	border-bottom: 1px solid #ddd;
+	display: table;
+	width: 100%;
+}
+.feedback-form .feedback-title{
+	display: block;
+	font-size: 14px;
+	color: #000;
+	line-height: 1.6;
+	margin-bottom: 15px;
+	float: left;
+	width: 33.3333%;
+}
+.feedback-form .feedback-rating{
+	margin-bottom: 15px;
+	position: relative;
+	float: left;
+	width: 33.3333%;
+}
+.feedback-form .feedback-rating .review-control-vote{
+	display: table;
+	width: 
+}
+.feedback-form .feedback-image{
+	display: block;
+	margin-bottom: 15px;
+	float: left;
+	width: 33.3333%;
+}
+.feedback-form .feedback-image .thumb{
+	width: 200px;
+	height: 200px;
+	display: block;
+}
+.feedback-form .feedback-image .thumb img{
+	width: 200px;
+	height: 200px;
+	display: block;
+}
+.feedback-form .feedback-action{
+	display: block;
+	width: 100%;
+}
+.feedback-form .feedback-action .action{
+	display: inline-block;
+	padding: 10px 15px;
+	color: #fff;
+	background-color: #ff0000;
+	cursor: pointer;
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        
+        <!-- <referenceBlock name="order_tab_info">
+            <block class="Magento\Sales\Block\Adminhtml\Order\View\Info" name="custom_block_view" template="Krishaweb_Feedback::order/view/rating.phtml">
+            </block>
+        </referenceBlock> -->
+
+         <!-- <referenceBlock name="order_tab_info">
+            <block class="Magento\Sales\Block\Adminhtml\Order\View\Tab\Info" name="custom_block_view" template="Krishaweb_Feedback::order/view/info.phtml">
+            </block>
+        </referenceBlock> -->
+
+        <!-- <referenceBlock name="order_tab_info" template="Krishaweb_Feedback::order/view/info.phtml"/> -->
+
+
+        <!-- <referenceContainer name="order_tab_info">
+            <block class="Temando\Shipping\Block\Adminhtml\Sales\Order\View\Info" name="order_info" template="Krishaweb_Feedback::order/view/info.phtml">
+                <container name="extra_customer_info"/>
+            </block>
+        </referenceContainer> -->
+        
+            <!-- <referenceBlock name="order_info">
+                <action method="setTemplate">
+                    <argument name="template" xsi:type="string">Krishaweb_Feedback::order/view/info.phtml</argument>
+                </action>
+                <action method="setTemplate">
+                    <argument name="template" xsi:type="string">Krishaweb_Feedback::order/view/info.phtml</argument>
+                </action>
+            </referenceBlock> -->
+        
+
+            <!-- <referenceContainer name="left">
+                <referenceBlock name="sales_order_tabs">
+                    <referenceBlock name="order_tab_info">
+                        <action method="setTemplate">
+                            <argument name="template" xsi:type="string">Krishaweb_Feedback::order/view/info.phtml</argument>
+                        </action>
+                    </referenceBlock>
+                </referenceBlock>
+            </referenceContainer> -->     
+    </body>
+</page>

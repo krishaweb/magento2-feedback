@@ -1,0 +1,28 @@
+<!--@subject Email Subject @-->
+<!--@vars
+{"store url=\"\"":"Store Url",
+"skin url=\"images/logo_email.gif\" _area='frontend'":"Email Logo Image"}
+@-->
+<!--@styles
+body,td { color:red; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;
+.feedback-wrapper .feedback-title{float:left; font-size: 14px; color: #000}
+.feedback-wrapper .feedback-image{float:left; width: 80px; height: 80px}
+.feedback-wrapper .feedback-rating{float:left; font-size: 14px; color: #000}
+}
+@-->
+
+{{template config_path="design/email/header_template"}}
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+    <tr>
+        <td>
+            <h1 style="padding: 15px; text-align: center; color: #000; display: block; font-weight: 18px; font-weight: bold; background-color: #f1f1f1;">
+                {{trans "Your Feedback is our asset"}}
+            </h1>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" valign="top">
+            {{layout handle="feedback_email_feedback_items" order=$order area="frontend"}}
+        </td>
+    </tr>
+</table>

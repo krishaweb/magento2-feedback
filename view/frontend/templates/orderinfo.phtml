@@ -1,0 +1,60 @@
+<?php
+$data = $block->getData();
+$orderItems = $block->getOrderData($data['order_id']);
+?>
+<div class="feedback-form">
+	<form action="<?php echo $block->getUrl('feedback/feedback/submit');?>" id="feedback_form" method="post">
+		<?php foreach($orderItems as $item):?>
+			<div class="feedback-wrapper">
+				<div class="feedback-title">
+					<?php echo $item['product_name'];?>
+				</div>
+				<div class="feedback-image">
+					<div class="thumb">
+						<img src="<?php echo $item['product_image'];?>">
+					</div>
+				</div>
+				<?php 
+				$orderItem = $block->getOrderItem($item['item_id']);
+
+				if($orderItem->getFeedbackRating() != NULL || $orderItem->getFeedbackRating() != ""):?>
+					<div><?php echo __('You have already given feedback');?></div>
+				<?php else:?>
+					<div class="feedback-rating">
+						<div class="control review-control-vote">
+						   <input type="radio" name="ratings[<?php echo $item['item_id']?>]" id="<?php echo $item['item_id']?>_1" value="1" class="radio">
+						   <label class="rate rating-1" for="<?php echo $item['item_id']?>_1" title="1 star" id="Value_1_label">
+						   <span><?php echo __('1 star');?></span>
+						   </label>
+
+						   <input type="radio" name="ratings[<?php echo $item['item_id']?>]" id="<?php echo $item['item_id']?>_2" value="2" class="radio" data-validate="{ 'rating-required':true}" aria-labelledby="Value_rating_label Value_2_label" aria-required="true">
+						   <label class="rate rating-2" for="<?php echo $item['item_id']?>_2" title="2 stars" id="Value_2_label">
+						   <span><?php echo __('2 star');?></span>
+						   </label>
+
+						   <input type="radio" name="ratings[<?php echo $item['item_id']?>]" id="<?php echo $item['item_id']?>_3" value="3" class="radio" data-validate="{ 'rating-required':true}" aria-labelledby="Value_rating_label Value_3_label" aria-required="true">
+						   <label class="rate rating-3" for="<?php echo $item['item_id']?>_3" title="3 stars" id="Value_3_label">
+						   <span><?php echo __('3 star');?></span>
+						   </label>
+
+						   <input type="radio" name="ratings[<?php echo $item['item_id']?>]" id="<?php echo $item['item_id']?>_4" value="4" class="radio" data-validate="{ 'rating-required':true}" aria-labelledby="Value_rating_label Value_4_label" aria-required="true">
+						   <label class="rate rating-4" for="<?php echo $item['item_id']?>_4" title="4 stars" id="Value_4_label">
+						   <span><?php echo __('4 star');?></span>
+						   </label>
+
+						   <input type="radio" name="ratings[<?php echo $item['item_id']?>]" id="<?php echo $item['item_id']?>_5" value="5" class="radio" data-validate="{ 'rating-required':true}" aria-labelledby="Value_rating_label Value_5_label" aria-required="true">
+						   <label class="rate rating-5" for="<?php echo $item['item_id']?>_5" title="5 stars" id="Value_5_label">
+						   <span><?php echo __('5 star');?></span>
+						   </label>
+						</div>
+					</div>
+				<?php endif;?>
+			</div>
+		<?php endforeach;?>
+		<div class="feedback-action">
+			<button class="action" type="submit" data-role="action">
+				<span><?php echo __('Submit');?></span>
+			</button>
+		</div>
+	</form>
+</div>

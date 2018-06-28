@@ -1,0 +1,10 @@
+.rating > span{
+	font-size: 30px;
+	color: orange;
+}
+.rating > span:before {
+   content: "\2605";
+   position: absolute;
+   font-size: 30px;
+   color: orange;
+}

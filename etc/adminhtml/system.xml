@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="feedback" translate="label" sortOrder="10">
+            <label>Feedback</label>
+        </tab>
+        <section id="feedback" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Feedback</label>
+            <tab>feedback</tab>
+            <resource>Krishaweb_Feedback::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="days_to_start" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Days To Start</label>
+                </field>
+                <field id="status_to_cron" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Status To Cron</label>
+                    <source_model>Krishaweb\Feedback\Model\Config\Source\Status</source_model>
+                </field>
+
+                <field id="time_to_start" translate="label" type="time" sortOrder="4" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Time To Start Cron</label>
+                    <backend_model>Krishaweb\Feedback\Model\Config\CronConfig</backend_model>
+                </field>
+
+                <field id="listbutton" translate="label" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Krishaweb\Feedback\Block\System\Config\Form\Button</frontend_model>
+                </field>
+
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+	<group id="feddback">
+		<job name="send_feedback_remainder_mail" instance="Krishaweb\Feedback\Cron\Sendremaindermail" method="execute">
+       		<config_path>crontab/default/jobs/feedback/schedule/cron_expr</config_path>
+		</job>
+	</group>
+</config>
+
+
+<config>
+	<group id="group_name">
+		<job name="job_name" instance="">
+			<config_path></config_path>
+			<schedule></schedule>
+		</job>
+	</group>
+</config>
